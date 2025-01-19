@@ -14,8 +14,10 @@ const MainPage = () => {
           />
         </div>
 
-        <div className="mainpage__principalwave wave"></div>
-        <div className="mainpage__secondarywave wave"></div>
+        <div className="mainpage__content">
+          <div className="mainpage__principalwave wave"></div>
+          <div className="mainpage__secondarywave wave"></div>
+        </div>
       </main>
     </>
   );
