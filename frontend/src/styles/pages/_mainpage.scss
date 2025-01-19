@@ -1,0 +1,46 @@
+.mainpage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  &__profile {
+    font-size: 5.5rem;
+    padding: 10px;
+  }
+
+  &__container {
+    @include flex(column);
+
+    &--image {
+      width: 50%;
+      height: 50%;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+  }
+
+  .wave {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0;
+    --mask: radial-gradient(176.14px at 50% 245px, #000 99%, #0000 101%)
+        calc(50% - 200px) 0/400px 100%,
+      radial-gradient(176.14px at 50% -145px, #0000 99%, #000 101%) 50% 100px/400px
+        100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+
+  &__principalwave {
+    background-color: map-get($backgroundColors, "secondary");
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &__secondarywave {
+    background-color: map-get($backgroundColors, "decoration");
+    bottom: 15%;
+  }
+}

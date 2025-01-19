@@ -13,4 +13,6 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
+  background-color: map-get($backgroundColors, "primary");
+  color: map-get($textColors, "primary");
 }
