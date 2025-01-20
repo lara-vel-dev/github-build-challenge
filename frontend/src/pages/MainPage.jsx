@@ -5,6 +5,8 @@ import happyImage from "../assets/img/happy.png";
 import neutralImage from "../assets/img/neutral.png";
 import sadImage from "../assets/img/sad.png";
 import angryImage from "../assets/img/angry.png";
+import ModelViewer from "../components/ModelViewer";
+import EggModel from "../assets/3d-models/Hen.glb";
 
 const daysOfWeek = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"];
 
@@ -57,11 +59,7 @@ const MainPage = () => {
         <CgProfile className="mainpage__profile" />
         <div className="mainpage__container">
           <h1>Hola, [Nombre]</h1>
-          <img
-            className="mainpage__container--image"
-            src="https://png.pngtree.com/png-clipart/20240318/original/pngtree-3d-render-of-turnip-chick-miniature-cute-character-png-image_14617717.png"
-            alt="Pollo animado"
-          />
+          <ModelViewer modelPath={EggModel} />
         </div>
 
         <div className="mainpage__principalwave wave"></div>
