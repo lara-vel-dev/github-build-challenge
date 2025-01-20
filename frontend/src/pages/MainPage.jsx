@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
-import axios from 'axios';
-import Modal from 'react-modal';
+import axios from "axios";
+import Modal from "react-modal";
 import joyfulImage from "../assets/img/joyful.png";
 import happyImage from "../assets/img/happy.png";
 import neutralImage from "../assets/img/neutral.png";
 import sadImage from "../assets/img/sad.png";
-<<<<<<< HEAD
 import angryImage from "../assets/img/angry.png";
 import ModelViewer from "../components/ModelViewer";
 import EggModel from "../assets/3d-models/Hen.glb";
-=======
->>>>>>> b2491cfdb963b1f8a5e0deb90f504fa572e7efb7
 
 const daysOfWeek = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"];
 
@@ -22,7 +19,7 @@ const MainPage = () => {
     { id: 2, name: "Leer", completed: Array(7).fill(false) },
     { id: 3, name: "Tomar agua", completed: Array(7).fill(false) },
   ]);
-  const [motivationalPhrase, setMotivationalPhrase] = useState('');
+  const [motivationalPhrase, setMotivationalPhrase] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSliderChange = (event) => {
@@ -61,22 +58,23 @@ const MainPage = () => {
   };
 
   const handleSubmit = () => {
-    const activityDone = habits.some(habit => habit.completed.includes(true));
+    const activityDone = habits.some((habit) => habit.completed.includes(true));
 
-    console.log('Enviando datos:', { emotion: sliderValue, activityDone }); // Agregar mensaje de consola
+    console.log("Enviando datos:", { emotion: sliderValue, activityDone }); // Agregar mensaje de consola
 
-    axios.post('http://localhost:3001/api/motivation', {
-      emotion: sliderValue,
-      activityDone: activityDone
-    })
-    .then(response => {
-      console.log('Respuesta recibida:', response.data); // Agregar mensaje de consola
-      setMotivationalPhrase(response.data.phrase);
-      setIsModalOpen(true); // Abrir el modal
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-    });
+    axios
+      .post("http://localhost:3001/api/motivation", {
+        emotion: sliderValue,
+        activityDone: activityDone,
+      })
+      .then((response) => {
+        console.log("Respuesta recibida:", response.data); // Agregar mensaje de consola
+        setMotivationalPhrase(response.data.phrase);
+        setIsModalOpen(true); // Abrir el modal
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   };
 
   const closeModal = () => {
@@ -98,7 +96,9 @@ const MainPage = () => {
         <div className="mainpage__content">
           <img src={getEmotion(sliderValue)} alt="Emotion" />
           <input
-            className={`mainpage__content--slider ${getSliderClass(sliderValue)}`}
+            className={`mainpage__content--slider ${getSliderClass(
+              sliderValue
+            )}`}
             id="slider"
             type="range"
             min="0"
@@ -139,9 +139,11 @@ const MainPage = () => {
                 ))}
               </tbody>
             </table>
-          </div>     
-           
-          <button className="register-button" onClick={handleSubmit}>Registrar Actividad</button>
+          </div>
+
+          <button className="register-button" onClick={handleSubmit}>
+            Registrar Actividad
+          </button>
         </div>
       </main>
 
