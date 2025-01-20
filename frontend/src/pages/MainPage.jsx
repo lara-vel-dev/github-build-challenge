@@ -82,7 +82,6 @@ const MainPage = () => {
           />
 
           <div className="mainpage__content--tracker" id="habit-tracker">
-            <h2>Hábitos</h2>
             <table>
               <thead>
                 <tr>
