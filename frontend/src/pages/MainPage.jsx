@@ -8,7 +8,7 @@ import neutralImage from "../assets/img/neutral.png";
 import sadImage from "../assets/img/sad.png";
 import angryImage from "../assets/img/angry.png";
 import ModelViewer from "../components/ModelViewer";
-import EggModel from "../assets/3d-models/Egg.glb";
+import EggModel from "../assets/3d-models/Hen.glb";
 
 const daysOfWeek = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"];
 
@@ -86,7 +86,7 @@ const MainPage = () => {
       <main className="mainpage">
         <CgProfile className="mainpage__profile" />
         <div className="mainpage__container">
-          <h1>Hola, [Nombre]</h1>
+          <h2>¡Hola! Registra tus hábitos</h2>
           <ModelViewer modelPath={EggModel} />
         </div>
 
@@ -111,7 +111,7 @@ const MainPage = () => {
             <table>
               <thead>
                 <tr>
-                  <th>Habito</th>
+                  <th>Hábito</th>
                   {daysOfWeek.map((day) => (
                     <th key={day}>{day}</th>
                   ))}
