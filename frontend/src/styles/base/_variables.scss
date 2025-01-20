@@ -14,13 +14,9 @@ $backgroundColors: (
 $emotions: (
   "joyful": #ffdb12,
   "happy": #fcfc6e,
-  "neutral": #f8be67,
+  "neutral": #f9b857,
   "sad": #ff9c31,
   "angry": #d75f59,
 );
 
-:root {
-  @each $key, $value in $emotions {
-    --color-#{$key}: #{$value};
-  }
-}
+

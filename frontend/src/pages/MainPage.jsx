@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
+import joyfulImage from "../assets/img/joyful.png";
+import happyImage from "../assets/img/happy.png";
+import neutralImage from "../assets/img/neutral.png";
+import sadImage from "../assets/img/sad.png";
+import angryImage from "../assets/img/angry.png";
 
 const daysOfWeek = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"];
 
@@ -16,11 +21,11 @@ const MainPage = () => {
   };
 
   const getEmotion = (value) => {
-    if (value < 20) return "Joyful";
-    if (value < 40) return "Happy";
-    if (value < 60) return "Neutral";
-    if (value < 80) return "Sad";
-    return "Angry";
+    if (value < 20) return joyfulImage;
+    if (value < 40) return happyImage;
+    if (value < 60) return neutralImage;
+    if (value < 80) return sadImage;
+    return angryImage;
   };
 
   const getSliderClass = (value) => {
@@ -63,7 +68,7 @@ const MainPage = () => {
         <div className="mainpage__secondarywave wave"></div>
 
         <div className="mainpage__content">
-          <p>Emotion: {getEmotion(sliderValue)}</p>
+          <img src={getEmotion(sliderValue)} />
           <input
             className={`mainpage__content--slider ${getSliderClass(
               sliderValue
