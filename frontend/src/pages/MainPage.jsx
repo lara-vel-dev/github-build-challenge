@@ -8,7 +8,7 @@ import neutralImage from "../assets/img/neutral.png";
 import sadImage from "../assets/img/sad.png";
 import angryImage from "../assets/img/angry.png";
 import ModelViewer from "../components/ModelViewer";
-import EggModel from "../assets/3d-models/Hen.glb";
+import EggModel from "../assets/3d-models/Egg.glb";
 
 const daysOfWeek = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"];
 
