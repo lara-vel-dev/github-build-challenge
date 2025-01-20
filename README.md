@@ -1,4 +1,6 @@
- The application aims to help people achieve the objectives and goals they want to achieve in a given time. To do this, it has an activity log and visual support in the form of an animated chicken, designed to be more user-friendly. This chicken represents the growth and advancement of the user. In addition, it includes an artificial intelligence model that provides emotional support through small motivational phrases, adapted to what is recorded in the app.
+# Github Copilot Challenge: Hatch - Grow Habits, Hatch a Better You
+
+The application aims to help people achieve the objectives and goals they want to achieve in a given time. To do this, it has an activity log and visual support in the form of an animated chicken, designed to be more user-friendly. This chicken represents the growth and advancement of the user. In addition, it includes an artificial intelligence model that provides emotional support through small motivational phrases, adapted to what is recorded in the app.
 Users will be able to choose between different periods to work on their goals: 21 days, 90 days, 180 days, 270 days and 360 days.
 The visual support of the chicken has three phases:
 Egg: Represents the beginning, where the user is in the planning and goal-setting phase.
