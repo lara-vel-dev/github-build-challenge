@@ -1,12 +1,12 @@
-// import MainPage from "./pages/MainPage"
-import LoginPage from "./pages/LoginPage"
-import RegisterPage from "./pages/RegisterPage"
+ import MainPage from "./pages/MainPage"
+//import LoginPage from "./pages/LoginPage"
+
 function App() {
   return (
     <>
-      {/* <MainPage /> */}
-     {/* <LoginPage/> */}
-      <RegisterPage/>
+     <MainPage/>
+     {/* <LoginPage/>*/}
+
     </>
   )
 }
