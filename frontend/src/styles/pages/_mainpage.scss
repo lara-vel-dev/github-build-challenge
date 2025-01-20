@@ -104,6 +104,71 @@
     .slider-angry {
       background: map-get($emotions, "angry");
     }
+
+    &--tracker {
+      margin-top: 20px;
+      background-color: map-get($backgroundColors, "tracker");
+      border-radius: 5px;
+      padding: 20px 0px;
+      color: map-get($textColors, "secondary");
+
+      .habit-checkbox {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+
+        input[type="checkbox"] {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .custom-checkbox {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #eee;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 7px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+        }
+
+        input:checked + .custom-checkbox {
+          background-color: map-get($backgroundColors, "checkbox");
+        }
+
+        &:after {
+          display: block;
+        }
+      }
+
+      input:disabled + .custom-checkbox {
+        background-color: #ccc;
+      }
+      &:after {
+        display: block;
+      }
+    }
+
+    input:disabled + .custom-checkbox {
+      background-color: #ccc;
+    }
   }
 
   .wave {

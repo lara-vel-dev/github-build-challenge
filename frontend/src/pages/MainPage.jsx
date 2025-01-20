@@ -85,7 +85,7 @@ const MainPage = () => {
             <table>
               <thead>
                 <tr>
-                  <th>Hábito</th>
+                  <th>Habito</th>
                   {daysOfWeek.map((day) => (
                     <th key={day}>{day}</th>
                   ))}
@@ -97,13 +97,16 @@ const MainPage = () => {
                     <td>{habit.name}</td>
                     {habit.completed.map((status, index) => (
                       <td key={index}>
-                        <input
-                          type="checkbox"
-                          checked={status}
-                          onChange={() =>
-                            toggleHabitCompletion(habit.id, index)
-                          }
-                        />
+                        <label className="habit-checkbox">
+                          <input
+                            type="checkbox"
+                            checked={status}
+                            onChange={() =>
+                              toggleHabitCompletion(habit.id, index)
+                            }
+                          />
+                          <span className="custom-checkbox"></span>
+                        </label>
                       </td>
                     ))}
                   </tr>
