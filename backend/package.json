@@ -1,0 +1,16 @@
+{
+  "name": "github-build-challenge",
+  "version": "1.0.0",
+  "description": "A project for the GitHub build challenge",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "ml-kmeans": "^6.0.0",
+    "body-parser": "^1.19.0"
+  }
+}

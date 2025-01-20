@@ -194,4 +194,43 @@
     background-color: map-get($backgroundColors, "decoration");
     bottom: 5%;
   }
+
+  .register-button {
+    width: 90%;
+    padding: 10px;
+    background: rgba(245, 167, 82, 1);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10%;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: rgba(245, 167, 82, 0.8);
+    }
+  }
+
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
